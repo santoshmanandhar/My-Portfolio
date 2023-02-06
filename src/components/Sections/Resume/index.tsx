@@ -1,11 +1,12 @@
 import axios from 'axios';
 import {FC, memo, useEffect,useState} from 'react';
 
-import {education, experience, SectionId, skills} from '../../../data/data';
+import {SectionId, skills} from '../../../data/data';
 import Section from '../../Layout/Section';
 import ResumeSection from './ResumeSection';
 import {SkillGroup} from './Skills';
-import TimelineItem from './TimelineItem';
+import Education from './Education';
+import WorkExperience from './WorkExperience';
 
 const Resume: FC = memo(() => {
   const [educationState,setEducation] = useState([]);
@@ -14,24 +15,32 @@ const Resume: FC = memo(() => {
     const educationData = await axios.post("https://bzi6vjair2.execute-api.us-east-1.amazonaws.com/v1/educationhistory");
     setEducation(educationData['data']['Items']);
 
-    console.log(educationState);
+    const workExpData = await axios.post("https://bzi6vjair2.execute-api.us-east-1.amazonaws.com/v1/workexperience");
+    setWorkExp(workExpData['data']['Items']);
   }
   // fetchData();
   useEffect(()=>{
     
-    // fetchData();
+    fetchData();
   }, []);
   return (
     <Section className="bg-neutral-100" sectionId={SectionId.Resume}>
       <div className="flex flex-col divide-y-2 divide-neutral-300">
         <ResumeSection title="Education">
-          {education.map((item, index) => (
+          {/* {education.map((item, index) => (
             <TimelineItem item={item} key={`${item.title}-${index}`} />
+          ))} */}
+          {educationState.map((item, index) => (
+            // <TimelineItem item={item} key={`${item.title}-${index}`} />
+            <Education item={item} key={index} />
           ))}
         </ResumeSection>
         <ResumeSection title="Work">
-          {experience.map((item, index) => (
+          {/* {experience.map((item, index) => (
             <TimelineItem item={item} key={`${item.title}-${index}`} />
+          ))} */}
+          {workExpState.map((item, index) => (
+            <WorkExperience item={item} key ={index} />
           ))}
         </ResumeSection>
         <ResumeSection title="Skills">

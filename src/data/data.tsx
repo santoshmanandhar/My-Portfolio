@@ -75,7 +75,7 @@ export const heroData: Hero = {
         at <strong className="text-stone-100">Maharishi International University</strong>, Iowa.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-           In my free time time, I study new technologies and my hobbies includes - <strong className="text-stone-100">Photography, Flying Drone, and Motorbiking.</strong>
+           In my free time, I study new technologies and my hobbies includes - <strong className="text-stone-100">Photography, Flying Drone, and Motorbiking.</strong>
       </p>
     </>
   ),
@@ -310,80 +310,80 @@ export const portfolioItems: PortfolioItem[] = [
  * Resume section -- TODO: Standardize resume contact format or offer MDX
  */
 export const education: TimelineItem[] = [
-  {
-    date: 'Running',
-    location: 'Maharishi International University, USA',
-    title: 'Masters in Computer Science',
-    content: <p>I'm currently studying MSCS at Maharishi International University, Iowa. The program is Programming intensive and focus on various leading programming language like - Java, JavaScript, HTML, CSS, Angular, React and more.</p>,
-  },
-  {
-    date: 'August 2015',
-    location: 'Sikkim Manipal University, India',
-    title: 'MScIT',
-    content: <p>It's a distance education course and I studied Programming, Algorithm, Network, Security and OS level subjects.</p>,
-  },
-  {
-    date: 'November 2007',
-    location: 'Prime College, Nepal',
-    title: 'Bachelor in Information Management',
-    content: <p>It's a four years bachelor program affiliated with Tribhuvan University. The courses are focused on Programming languages (C, C++. C# and Java), Network including CCNP training, Web Design, Security, Database, and many more. </p>,
-  },
+  // {
+  //   date: 'Running',
+  //   location: 'Maharishi International University, USA',
+  //   title: 'Masters in Computer Science',
+  //   content: <p>I'm currently studying MSCS at Maharishi International University, Iowa. The program is Programming intensive and focus on various leading programming language like - Java, JavaScript, HTML, CSS, Angular, React and more.</p>,
+  // },
+  // {
+  //   date: 'August 2015',
+  //   location: 'Sikkim Manipal University, India',
+  //   title: 'MScIT',
+  //   content: <p>It's a distance education course and I studied Programming, Algorithm, Network, Security and OS level subjects.</p>,
+  // },
+  // {
+  //   date: 'November 2007',
+  //   location: 'Prime College, Nepal',
+  //   title: 'Bachelor in Information Management',
+  //   content: <p>It's a four years bachelor program affiliated with Tribhuvan University. The courses are focused on Programming languages (C, C++. C# and Java), Network including CCNP training, Web Design, Security, Database, and many more. </p>,
+  // },
 ];
 
 export const experience: TimelineItem[] = [
-  {
-    date: 'February 2018 - August 2022',
-    location: 'RTI International',
-    title: 'IT Officer (System Administrator)',
-    content: (
-      <p>
-        Joined the RTI International Global ITS Support team to provide support on AD Management, File Share, FTP, Build and Decommission of servers in Azure and VMWare, Create and Manage Security policies. Later on 2020, I moved to Cyber Security department and work on creating Service Maps for various enterprise applications, dashboard creation and management and static and dynamic report creation.
-      </p>
-    ),
-  },
-  {
-    date: 'August 2015 - January 2018',
-    location: 'RTI International\'s Early Grade Reading Program (EGRP) Nepal',
-    title: 'IT Specialist',
-    content: (
-      <p>
-        Joined the EGRP Nepal Project and worked on setup of EGRP Nepal headoffice in Kathmandu and 5 regional offices in Nepal. Provide technical training and support to 100+ staffs of the project. Setup and maintain AD server, File Server and Print Server.
-      </p>
-    ),
-  },
+  // {
+  //   date: 'February 2018 - August 2022',
+  //   location: 'RTI International',
+  //   title: 'IT Officer (System Administrator)',
+  //   content: (
+  //     <p>
+  //       Joined the RTI International Global ITS Support team to provide support on AD Management, File Share, FTP, Build and Decommission of servers in Azure and VMWare, Create and Manage Security policies. Later on 2020, I moved to Cyber Security department and work on creating Service Maps for various enterprise applications, dashboard creation and management and static and dynamic report creation.
+  //     </p>
+  //   ),
+  // },
+  // {
+  //   date: 'August 2015 - January 2018',
+  //   location: 'RTI International\'s Early Grade Reading Program (EGRP) Nepal',
+  //   title: 'IT Specialist',
+  //   content: (
+  //     <p>
+  //       Joined the EGRP Nepal Project and worked on setup of EGRP Nepal headoffice in Kathmandu and 5 regional offices in Nepal. Provide technical training and support to 100+ staffs of the project. Setup and maintain AD server, File Server and Print Server.
+  //     </p>
+  //   ),
+  // },
 
-  {
-    date: 'April 2012 - July 2015',
-    location: 'International Organization for Migration (IOM) Nepal',
-    title: 'IT Assistant',
-    content: (
-      <p>
-        Worked in two project offices of IOM Nepal - Kathmandu and Damak, providing onsite and offsite support, maintenance of ICT equipment, implementation and managment of centralized data backup system and threat prevention.
-      </p>
-    ),
-  },
+  // {
+  //   date: 'April 2012 - July 2015',
+  //   location: 'International Organization for Migration (IOM) Nepal',
+  //   title: 'IT Assistant',
+  //   content: (
+  //     <p>
+  //       Worked in two project offices of IOM Nepal - Kathmandu and Damak, providing onsite and offsite support, maintenance of ICT equipment, implementation and managment of centralized data backup system and threat prevention.
+  //     </p>
+  //   ),
+  // },
 
-  {
-    date: 'December 2010 - March 2012',
-    location: 'Elite Networks Pvt. Ltd., Nepal',
-    title: 'Senior Support Executive',
-    content: (
-      <p>
-        Worked on providing technical support to various country-leading banks including Standard Chartered Bank, work on implementation of Wincor Preview application for ATM machine monitor and maitenance of in-house antivirus system and MDaemon Email server.
-      </p>
-    ),
-  },
+  // {
+  //   date: 'December 2010 - March 2012',
+  //   location: 'Elite Networks Pvt. Ltd., Nepal',
+  //   title: 'Senior Support Executive',
+  //   content: (
+  //     <p>
+  //       Worked on providing technical support to various country-leading banks including Standard Chartered Bank, work on implementation of Wincor Preview application for ATM machine monitor and maitenance of in-house antivirus system and MDaemon Email server.
+  //     </p>
+  //   ),
+  // },
 
-  {
-    date: 'November 2007 - January 2010',
-    location: 'Commodities & Metal Exchange Nepal Ltd., Nepal',
-    title: 'IT Officer',
-    content: (
-      <p>
-        Worked on design, implemenatation and maintenance of AD server in the office. Support to the brokers related to in-house application issues and installation.
-      </p>
-    ),
-  },
+  // {
+  //   date: 'November 2007 - January 2010',
+  //   location: 'Commodities & Metal Exchange Nepal Ltd., Nepal',
+  //   title: 'IT Officer',
+  //   content: (
+  //     <p>
+  //       Worked on design, implemenatation and maintenance of AD server in the office. Support to the brokers related to in-house application issues and installation.
+  //     </p>
+  //   ),
+  // },
 ];
 
 /**
