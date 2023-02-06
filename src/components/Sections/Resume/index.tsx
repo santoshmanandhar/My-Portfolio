@@ -1,4 +1,5 @@
-import {FC, memo} from 'react';
+import axios from 'axios';
+import {FC, memo, useEffect,useState} from 'react';
 
 import {education, experience, SectionId, skills} from '../../../data/data';
 import Section from '../../Layout/Section';
@@ -7,6 +8,19 @@ import {SkillGroup} from './Skills';
 import TimelineItem from './TimelineItem';
 
 const Resume: FC = memo(() => {
+  const [educationState,setEducation] = useState([]);
+  const [workExpState, setWorkExp] = useState([]);
+  const fetchData = async() =>{
+    const educationData = await axios.post("https://bzi6vjair2.execute-api.us-east-1.amazonaws.com/v1/educationhistory");
+    setEducation(educationData['data']['Items']);
+
+    console.log(educationState);
+  }
+  // fetchData();
+  useEffect(()=>{
+    
+    // fetchData();
+  }, []);
   return (
     <Section className="bg-neutral-100" sectionId={SectionId.Resume}>
       <div className="flex flex-col divide-y-2 divide-neutral-300">
