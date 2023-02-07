@@ -22,7 +22,7 @@ const ContactForm: FC = memo(() => {
   );
 
   const [data, setData] = useState<FormData>(defaultData);
-
+  const [info, setInfo] = useState<String>("");
   const onChange = useCallback(
     <T extends HTMLInputElement | HTMLTextAreaElement>(event: React.ChangeEvent<T>): void => {
       const {name, value} = event.target;
@@ -48,11 +48,22 @@ const ContactForm: FC = memo(() => {
   const inputClasses =
     'bg-neutral-700 border-0 focus:border-0 focus:outline-none focus:ring-1 focus:ring-orange-600 rounded-md placeholder:text-neutral-400 placeholder:text-sm text-neutral-200 text-sm';
 
+    const validateEmail = (email) => {    return email.match(      /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/    );  };
+
   const sendEmail = function () {
-    if(data.name=="" || data.email=="" || data.message==""){
+    if(data.name=="" || data.email=="" || data.message=="" ){
       console.log("Required information is empty");
+      setInfo('Please fill all the required fields.');
       return;
     }
+    if(!validateEmail(data.email)){
+      setInfo("Email is not valid.");
+      return;
+    }
+    
+    
+
+
     console.log('send email', data)
     AWS.config.update({
       region: 'us-east-1',
@@ -66,11 +77,11 @@ const ContactForm: FC = memo(() => {
       Message: {
         Body: {
           Text: {
-            Data: `You have received below message. \n Name: ${data.name} \n Email: ${data.email} \n Phone: ${data.mobile} \n Message Title: ${data.messageTitle} \n Message: ${data.message}`
+            Data: `<b>You have received below message.</b>\n \n Name: ${data.name} \n Email: ${data.email} \n Phone: ${data.mobile} \n Message Title: ${data.messageTitle} \n Message: ${data.message}`
           }
         },
         Subject: {
-          Data: 'Email from Website'
+          Data: 'Email from the resume portal.'
         }
       },
       Source: 'santosh.manandhar1@gmail.com',
@@ -80,17 +91,20 @@ const ContactForm: FC = memo(() => {
     console.log('send email');
     ses.sendEmail(params).promise().then(res => {
       console.log('The email is sent: ', res);
+      setData({
+        name:'',
+        email:'',
+        mobile:'',
+        messageTitle:'',
+        message:'',
+      });
+      setInfo("Your email has been sent successfully.")
     }).catch(err => {
       console.error('Error while sending email: ', err);
+      setInfo('Error while sending email. Please try later.')
     })
 
-   setData({
-      name:'',
-      email:'',
-      mobile:'',
-      messageTitle:'',
-      message:'',
-    });
+   
   }
   const {email}=data;
   const {messageTitle} = data;
@@ -99,21 +113,22 @@ const ContactForm: FC = memo(() => {
   const {message} = data;
 
   return (
-    <form className="grid min-h-[320px] grid-cols-1 gap-y-4" method="POST" onSubmit={handleSendMessage}>
-      <input id="name" className={inputClasses} name="name" onChange={onChange} placeholder="Name" required type="text" value={name}/>
+    // <form className="grid min-h-[320px] grid-cols-1 gap-y-4" method="POST" onSubmit={handleSendMessage}>
+    <div className="grid min-h-[320px] grid-cols-1 gap-y-4">
+      <input id="name" className={inputClasses} name="name" onChange={onChange} placeholder="Name*" required type="text" value={name}/>
       <input
         id="email"
         autoComplete="email"
         className={inputClasses}
         name="email"
         onChange={onChange}
-        placeholder="Email"
+        placeholder="Email*"
         required
         type="email"
         value={email}
       />
-       <input id="mobile" className={inputClasses} name="mobile" onChange={onChange} placeholder="Mobile Number" required type="text" value={mobile}/>
-       <input id="msgTitle" className={inputClasses} name="messageTitle" onChange={onChange} placeholder="Message Title" required type="text" value={messageTitle}/>
+       <input id="mobile" className={inputClasses} name="mobile" onChange={onChange} placeholder="Mobile Number"  type="text" value={mobile}/>
+       <input id="msgTitle" className={inputClasses} name="messageTitle" onChange={onChange} placeholder="Message Title"  type="text" value={messageTitle}/>
 
       <textarea
         id="message"
@@ -121,7 +136,7 @@ const ContactForm: FC = memo(() => {
         maxLength={250}
         name="message"
         onChange={onChange}
-        placeholder="Message"
+        placeholder="Message*"
         required
         rows={6}
         value={message}
@@ -133,8 +148,11 @@ const ContactForm: FC = memo(() => {
         type="submit" >
         Send Message
       </button>
+     {
+      (info != "") &&  <div style={{color:"white", font:"arial-label"}}>{info}</div>
+     }
      
-    </form>
+    </div>
     
   );
 });
