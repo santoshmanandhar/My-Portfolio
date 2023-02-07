@@ -395,17 +395,17 @@ export const testimonial: TestimonialSection = {
     {
       name: 'Sanjive Kumar Singh',
       text: 'I know Santosh since 2015, and I found him very professional in his work. He is always there when you need him. He had done a brilliant job on setup of RTI International\'s EGRP Nepal project head office at Kathmandu and other 5 regional offices./n Good luck Santosh. ',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/169.jpg',
+      //image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/169.jpg',
     },
     {
       name: 'Rekha Shrestha',
       text: 'I found Santosh a very hard working person. He is always available to help. He is always keen to learn new things. Good luck.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/14.jpg',
+      //image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/14.jpg',
     },
     {
       name: 'Bordee Vattanawase',
       text: 'Santosh is very knowledgable and professional. I worked as his supervisor for 3 years and he had proved himself in every task I assigned to him.',
-      image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/69.jpg',
+      //image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/69.jpg',
     },
   ],
 };
