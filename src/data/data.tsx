@@ -24,6 +24,7 @@ import porfolioImage9 from '../images/portfolio/portfolio-9.jpg';
 import porfolioImage10 from '../images/portfolio/portfolio-10.jpg';
 import porfolioImage11 from '../images/portfolio/portfolio-11.jpg';
 import profilepic from '../images/Santosh_Picture.jpg';
+import amplifyGit from '../images/amp-git.png';
 import testimonialImage from '../images/testimonial.webp';
 import {
   About,
@@ -32,6 +33,7 @@ import {
   Hero,
   HomepageMeta,
   PortfolioItem,
+  Blog,
   SkillGroup,
   Social,
   TestimonialSection,
@@ -53,10 +55,11 @@ export const SectionId = {
   Hero: 'hero',
   About: 'about',
   Contact: 'contact',
-  Portfolio: 'portfolio',
+  //Portfolio: 'portfolio',
   Resume: 'resume',
   Skills: 'skills',
   Stats: 'stats',
+  Blog:'blog',
   Testimonials: 'testimonials',
 } as const;
 

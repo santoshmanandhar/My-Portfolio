@@ -77,7 +77,7 @@ const ContactForm: FC = memo(() => {
       Message: {
         Body: {
           Text: {
-            Data: `<b>You have received below message.</b>\n \n Name: ${data.name} \n Email: ${data.email} \n Phone: ${data.mobile} \n Message Title: ${data.messageTitle} \n Message: ${data.message}`
+            Data: `You have received below message.\n \n Name: ${data.name} \n Email: ${data.email} \n Phone: ${data.mobile} \n Message Title: ${data.messageTitle} \n Message: ${data.message}`
           }
         },
         Subject: {

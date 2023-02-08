@@ -9,11 +9,16 @@ import {PortfolioItem} from '../../data/dataDef';
 import useDetectOutsideClick from '../../hooks/useDetectOutsideClick';
 import Section from '../Layout/Section';
 
-const Portfolio: FC = memo(() => {
+const Blog: FC = memo(() => {
   return (
-    <Section className="bg-neutral-800" sectionId={SectionId.Portfolio}>
+    <Section className="bg-neutral-800" sectionId={SectionId.Blog}>
+      {/* sectionId={SectionId.Portfolio} */}
       <div className="flex flex-col gap-y-8">
         <h2 className="self-center text-xl font-bold text-white">Blog</h2>
+        <div style={{fontFamily:"Helvetica, Arial, sans-serif", color:"white", fontStyle:"italic", fontWeight:"bolder", textTransform:"uppercase", textShadow:"1px 1px 1px red, 2px 2px 1px black;", textAlign:"center"}}>
+
+          <h3><a href='https://medium.com/@santosh.manandhar1/amplify-hosting-and-github-repository-18375bd47aea' target={'_blank'}>Amplify Hosting and GitHub Repository</a></h3>
+          </div>
         <div className=" w-full columns-2 md:columns-3 lg:columns-4">
           
           {/* {portfolioItems.map((item, index) => {
@@ -36,8 +41,8 @@ const Portfolio: FC = memo(() => {
   );
 });
 
-Portfolio.displayName = 'Portfolio';
-export default Portfolio;
+Blog.displayName = 'Blog';
+export default Blog;
 
 const ItemOverlay: FC<{item: PortfolioItem}> = memo(({item: {url, title, description}}) => {
   const [mobile, setMobile] = useState(false);
@@ -83,3 +88,4 @@ const ItemOverlay: FC<{item: PortfolioItem}> = memo(({item: {url, title, descrip
     </a>
   );
 });
+
