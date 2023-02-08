@@ -94,6 +94,19 @@ export interface TimelineItem {
 }
 
 /**
+ * Blog section
+ */
+export interface Blog {
+  date: string;
+  location: string;
+  title: string;
+  description: string;
+  content: JSX.Element;
+  url: string;
+  image: string | StaticImageData;
+}
+
+/**
  * Testimonial section
  */
 export interface TestimonialSection {
