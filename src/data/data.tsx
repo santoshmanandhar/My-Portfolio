@@ -74,7 +74,10 @@ export const heroData: Hero = {
   description: (
     <>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
-        I'm a <strong className="text-stone-100">System Administrator</strong>, currently studying Masters In Computer Science 
+        {/*I am a dedicated <strong className="text-stone-100">System Administrator </strong> pursuing a Master's degree in Computer Science at Maharishi International University, Iowa. Apart from my academic pursuits, I am an avid learner, always eager to explore new technologies and stay updated with the latest industry trends. In my leisure time, I indulge in various hobbies such as photography, flying drones, and motorbiking. These activities provide me with a creative outlet and a sense of adventure. I believe in continuous self-improvement and find joy in exploring both the virtual and physical realms.*/}
+
+
+        I'm a <strong className="text-stone-100">System Administrator</strong>, currently studying Masters In Computer Science
         at <strong className="text-stone-100">Maharishi International University</strong>, Iowa.
       </p>
       <p className="prose-sm text-stone-200 sm:prose-base lg:prose-lg">
@@ -103,7 +106,7 @@ export const heroData: Hero = {
 export const aboutData: About = {
   profileImageSrc: profilepic,
   description: `Process-driven, highly competent IT professional with over 15 years of experience in administering, managing and maintaining Windows server and computer system. Adept with the level of experience in installing and configuring software, hardware and networks; able to monitor system performance and
-  troubleshoot issues. Possesses an associate certification in Microsoft and Cisco.`,
+  troubleshoot issues. Hands-on experience on ServiceNow CMDB, Discovery and Service Mapping. Possesses an associate certification in Microsoft Windows Servers and Azure.`,
   aboutItems: [
     {label: 'Location', text: 'Fairfield, IA', Icon: MapIcon},
     {label: 'Age', text: '39', Icon: CalendarIcon},
@@ -140,7 +143,7 @@ export const skills: SkillGroup[] = [
     skills: [
       {
         name: 'JavaScript',
-        level: 5,
+        level: 3,
       },
       {
         name: 'React',
@@ -152,12 +155,8 @@ export const skills: SkillGroup[] = [
     name: 'Backend development',
     skills: [
       {
-        name: 'Node.js',
-        level: 5,
-      },
-      {
         name: 'SpringBoot',
-        level: 4,
+        level: 5,
       },
       {
         name: 'Java',
@@ -235,6 +234,24 @@ export const skills: SkillGroup[] = [
       },
     ],
   },
+  // {
+  //   name: 'ServiceNow',
+  //   skills: [
+  //     {
+  //       name: 'CMDB',
+  //       level: 5,
+  //     },
+  //     {
+  //       name: 'Discovery',
+  //       level: 4,
+  //     },
+  //     {
+  //       name: 'Service Mapping',
+  //       level: 5,
+  //     },
+  //   ],
+  //
+  // }
 ];
 
 /**
@@ -242,9 +259,9 @@ export const skills: SkillGroup[] = [
  */
 export const portfolioItems: PortfolioItem[] = [
   // {
-  //   title: 'Project title 1',
-  //   description: 'Give a short description of your project here.',
-  //   url: 'https://timbaker.me',
+  //   title: 'Cloud Computing Project - Web Portfolio',
+  //   description: 'Created a portfolio as part of Cloud Computing course. Created using react and typescript.',
+  //   url: 'https://smanandhar.me',
   //   image: porfolioImage1,
   // },
   // {
@@ -396,18 +413,38 @@ export const testimonial: TestimonialSection = {
   imageSrc: testimonialImage,
   testimonials: [
     {
-      name: 'Sanjive Kumar Singh',
-      text: 'I know Santosh since 2015, and I found him very professional in his work. He is always there when you need him. He had done a brilliant job on setup of RTI International\'s EGRP Nepal project head office at Kathmandu and other 5 regional offices./n Good luck Santosh. ',
+      name: 'Dipendra Poudel',
+      text: 'I am delighted to write a recommendation for Santosh Manandhar based on his outstanding performance during his tenure at the International Organization for Migration (IOM) - UN Migration. I had the pleasure of working with him during for almost 3 years at IOM.\n' +
+          '\n' +
+          'Santosh demonstrated exceptional technical skills and a strong dedication to his work. He consistently provided excellent onsite end-user support to the IOM staff, ensuring their technology needs were met promptly and efficiently.\n' +
+          '\n' +
+          'One of Santosh\'s notable contributions was his expertise in installing, upgrading, and troubleshooting hardware and software, ensuring a seamless experience for end users. Santosh also played a crucial role in safeguarding the systems and data from potential threats.\n' +
+          '\n' +
+          'In addition to his technical skills, Santosh displayed a proactive approach to his responsibilities. He actively participated in the management of the ITC equipment inventory, ensuring proper tracking and maintenance. Santosh was also instrumental in implementing and managing a centralized data backup system, contributing to the overall data security of the organization.\n' +
+          '\n' +
+          'Moreover, Santosh exhibited excellent communication and training abilities. He provided ITC training to end users, enabling them to effectively utilize existing and new applications and systems. His patience and clear instructions helped enhance the productivity of staff members.\n' +
+          '\n' +
+          'Throughout his tenure at IOM - UN Migration, Santosh consistently demonstrated professionalism, reliability, and a strong work ethic.\n' +
+          '\n' +
+          'Based on my firsthand experience working with Santosh, I highly recommend him for any IT-related position. His technical expertise, dedication to providing exceptional support, and strong problem-solving skills make him an ideal candidate for any organization. Please feel free to reach out to me if you require any further information.',
       //image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/169.jpg',
     },
     {
-      name: 'Rekha Shrestha',
-      text: 'I found Santosh a very hard working person. He is always available to help. He is always keen to learn new things. Good luck.',
+      name: 'Geshan Manandhar',
+      text: 'Santosh is a highly skilled and experienced System Administrator (budding DevOps/SRE engineer) with over 15 years of experience in managing and optimizing IT systems and network infrastructure. He has a deep understanding of Windows server environments, and he is proficient in deploying software and security updates while ensuring system stability. Santosh is also skilled in troubleshooting and resolving complex technical issues, and he has a proven track record of providing timely and effective support to end-users. Recently he has proven his mettle as a DevOps engineer with a host of Azure certificates, school projects deployed to AWS and overall impressive knowlege of Git, CI/CD and infrastrucutre as code.\n' +
+          '\n' +
+          'In addition to his technical skills, Santosh is also a highly motivated and results-oriented individual. He is always looking for ways to improve efficiency and drive innovation, and he is always willing to go the extra mile to get the job done. Santosh is also a team player, and he is always willing to help out his colleagues. I can vouch for this from our Bachelor years where he was very helpful to everyone and always eager to get his tasks done in time with optimal quality.\n' +
+          '\n' +
+          'I have no doubt that Santosh would be an asset to any company he joins. He is a highly skilled and experienced System Administrator with a proven track record of success. I highly recommend him for all eligible roles.',
       //image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/14.jpg',
     },
     {
-      name: 'Bordee Vattanawase',
-      text: 'Santosh is very knowledgable and professional. I worked as his supervisor for 3 years and he had proved himself in every task I assigned to him.',
+      name: 'Unubold Tumenbayar',
+      text: 'Santosh Manandhar is an exceptional individual whom I had the pleasure of teaching AWS during our Cloud Computing program at Maharishi International University. I am delighted to provide my highest recommendation for his dedication, aptitude, and commitment to AWS technologies.\n' +
+          '\n' +
+          'Throughout the course, he consistently demonstrated an eagerness to learn and a strong work ethic. He eagerly absorbed complex concepts, exhibited a solid understanding of AWS fundamentals, and showcased exceptional problem-solving skills when faced with challenging scenarios. His ability to grasp new concepts quickly and apply them to real-world scenarios was impressive.\n' +
+          '\n' +
+          'It is without hesitation that I recommend Santosh Manandhar for any opportunity related to AWS. He possess the technical skills, the drive for continuous learning, and the collaborative mindset that are crucial for success in this field. I am confident that his strong work ethic, coupled with his exceptional AWS knowledge, will make him an asset to any organization.',
       //image: 'https://cloudflare-ipfs.com/ipfs/Qmd3W5DuhgHirLHGVixi6V76LhCkZUz6pnFt5AJBiyvHye/avatar/69.jpg',
     },
   ],
@@ -433,8 +470,8 @@ export const contact: ContactSection = {
     },
     {
       type: ContactType.Instagram,
-      text: '@san_supertramp',
-      href: 'https://www.instagram.com/san_supertramp/',
+      text: '@cameradventuresantosh',
+      href: 'https://www.instagram.com/cameradventuresantosh/',
     },
     {
       type: ContactType.Github,
@@ -449,6 +486,6 @@ export const contact: ContactSection = {
  */
 export const socialLinks: Social[] = [
   {label: 'Github', Icon: GithubIcon, href: 'https://github.com/santoshmanandhar'},
-  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/smanandhar/'},
-  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/san_supertramp/'},
+  {label: 'LinkedIn', Icon: LinkedInIcon, href: 'https://www.linkedin.com/in/manandharsantosh/'},
+  {label: 'Instagram', Icon: InstagramIcon, href: 'https://www.instagram.com/cameradventuresantosh/'},
 ];
